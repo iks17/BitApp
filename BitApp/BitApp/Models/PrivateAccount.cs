@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace BitServerBL.Models
+namespace BitApp.Models
 {
     public partial class PrivateAccount
     {

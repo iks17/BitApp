@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BitApp.Models;
+using BitApp.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,12 +24,7 @@ namespace BitApp
 
             MainPage = new NavigationPage(new LoginPage());
         }
-        public App()
-        {
-            InitializeComponent();
-
-            MainPage = new MainPage();
-        }
+        
 
         protected override void OnStart()
         {

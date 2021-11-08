@@ -6,12 +6,14 @@ using Xamarin.Forms;
 using BitApp.Models;
 using BitApp.Services;
 using BitApp.ViewModels;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
-namespace YadBeYadAPP.ViewModels
+namespace BitApp.ViewModels
 {
-    class LoginPageViewModel : BaseViewModel
+    class LoginViewModel : BaseViewModel
     {
-        public LoginPageViewModel()
+        public LoginViewModel()
         {
             Email = string.Empty;
             Password = string.Empty;
@@ -23,7 +25,7 @@ namespace YadBeYadAPP.ViewModels
 
         private async void Login()
         {
-            BitApiProxy proxy = BitApiProxy.CreateProxy();
+            BitAPIProxy proxy = BitAPIProxy.CreateProxy();
             try
             {
                 User u = await proxy.LoginAsync(Email, Password);
