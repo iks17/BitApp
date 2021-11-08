@@ -5,6 +5,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using BitApp.Models;
 using BitApp.Services;
+using BitApp.ViewModels;
 
 namespace YadBeYadAPP.ViewModels
 {
