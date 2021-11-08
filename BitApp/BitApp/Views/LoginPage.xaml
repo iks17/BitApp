@@ -3,32 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BitApp.Views.LoginPage"
              Background="White">
-    <ContentPage.Content>
 
-    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="10">
+
+        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="10">
 
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5">
-          <Grid.RowDefinitions>
+                <Grid.RowDefinitions>
 
 
 
 
-          </Grid.RowDefinitions>
-    <Frame>
-        <Grid>
+                </Grid.RowDefinitions>
+                <Frame>
+                    <Grid>
 
-        </Grid>
-    </Frame>
+                    </Grid>
+                </Frame>
 
-    <Frame>
-        <Grid>
+                <Frame>
+                    <Grid>
 
-        </Grid>
-    </Frame>
-            
-            
-            
+                    </Grid>
+                </Frame>
+
+
+
             </Grid>
 
         </StackLayout>
-    </ContentPage.Content>
+    
