@@ -15,6 +15,9 @@ namespace BitApp.Views
         public LoginPage()
         {
             InitializeComponent();
+            LoginViewModel lVM = new LoginViewModel();
+            BindingContext = lVM;
+            lVM.Push += (p) => Navigation.PushAsync(p);
         }
     }
 }
