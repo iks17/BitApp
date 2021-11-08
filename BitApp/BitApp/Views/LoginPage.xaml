@@ -1,6 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BitApp.Views.LoginPage">
-    
-</ContentPage>
+             x:Class="BitApp.Views.LoginPage"
+             Background="White">
+    <ContentPage.Content>
+
+    <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="10">
+
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5">
+          <Grid.RowDefinitions>
+
+
+
+
+          </Grid.RowDefinitions>
+    <Frame>
+        <Grid>
+
+        </Grid>
+    </Frame>
+
+    <Frame>
+        <Grid>
+
+        </Grid>
+    </Frame>
+            
+            
+            
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
