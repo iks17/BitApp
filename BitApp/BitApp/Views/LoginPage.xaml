@@ -1,30 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BitApp.Views.LoginPage"
-             Background="White">
+             xmlns:local="clr-namespace:BitApp.ViewModels"
+             x:Class="BitApp.Views.LoginPage">
+    <ContentPage.BindingContext>
+    <local:LoginViewModel></local:LoginViewModel>
+    </ContentPage.BindingContext>
+
+
     <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#CAFBFE" Padding="10">
 
-        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="10">
-
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="5" >
                 <Grid.RowDefinitions>
-
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
 
 
 
                 </Grid.RowDefinitions>
-                <Frame>
-                    <Grid>
+                <Label Text="Bit App" FontFamily="Secular One" FontSize="25" TextColor="Black" FontAttributes="Bold" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" Grid.Row="0" />
 
+                <Image  Source="YadBeYadLogo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  WidthRequest="85" Grid.Row="1"/>
+                <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#C9CFED" >
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="EmailLogo.png" Grid.Column="0" HeightRequest="15"/>
+                        <Entry Grid.Column="1" Placeholder="Enter your email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                    </Grid>
+                </Frame>
+                <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="3" BackgroundColor="#C9CFED" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="KeyIcon.png" Grid.Column="0" HeightRequest="15"/>
+                        <Entry Grid.Column="1" Placeholder="Enter your password" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
                     </Grid>
                 </Frame>
 
-                <Frame>
-                    <Grid>
+                <Button  Text="Forgot your password?" FontFamily="Uchen" FontSize="8" TextColor="#4860DE" FontAttributes="Bold"  
+                    VerticalOptions="CenterAndExpand" BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand" Grid.Row="4" />
 
-                    </Grid>
-                </Frame>
+                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="30" Grid.Row="5" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Secular One" FontAttributes="Bold"/>
+                <Label Padding="0,0" Text="-OR-" FontFamily="Unkempt" FontSize="10" TextColor="#4860DE" FontAttributes="Bold" Margin="0,10,0,0"
+                    HorizontalOptions="CenterAndExpand"  Grid.Row="6"  />
+                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  WidthRequest="100" Grid.Row="7" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Secular One" FontAttributes="Bold"/>
+
 
 
 
