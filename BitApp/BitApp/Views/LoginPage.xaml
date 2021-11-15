@@ -53,13 +53,13 @@
                 </Frame>
 
                 
-                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="30" Grid.Row="4" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Secular One" FontAttributes="Bold"/>
+                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30" Grid.Row="4" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
                 <Label Padding="0,0" Text="----------------------------------" FontFamily="Unkempt" FontSize="10" TextColor="#950740" FontAttributes="Bold" Margin="0,10,0,0"
                     HorizontalOptions="CenterAndExpand"  Grid.Row="7"  />
-                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  WidthRequest="100" HeightRequest="30" Grid.Row="8" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Secular One" FontAttributes="Bold"/>
+                <Button BackgroundColor="#6482EE" HorizontalOptions="CenterAndExpand"  WidthRequest="150" HeightRequest="30" Grid.Row="8" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto" FontAttributes="Bold"/>
 
 
-                <Button  Text="Forgot your password?" WidthRequest="100" HeightRequest="30" FontFamily="Uchen" FontSize="8" TextColor="#950740" FontAttributes="Bold"  
+                <Button  Text="Forgot Password?" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#950740" FontAttributes="Bold"  
                     VerticalOptions="CenterAndExpand" BackgroundColor="#6482EE"
                     HorizontalOptions="CenterAndExpand" Grid.Row="6" />
 
