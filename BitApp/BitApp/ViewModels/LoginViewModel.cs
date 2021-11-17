@@ -8,6 +8,7 @@ using BitApp.Services;
 using BitApp.ViewModels;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using BitApp.Views;
 
 namespace BitApp.ViewModels
 {
@@ -33,7 +34,7 @@ namespace BitApp.ViewModels
                 if (u != null)
                 {
                     ((App)App.Current).CurrentUser = u;
-                    //Push?.Invoke(new StartPage());
+                    Push?.Invoke(new SignUpPage());
                 }
             }
             catch (Exception)
