@@ -25,7 +25,7 @@
 
 
                 </Grid.RowDefinitions>
-                <Label Text="Wallet Login" FontFamily="Roboto" FontSize="30" TextColor="#C3073F" FontAttributes="Bold" 
+                <Label Text="Wallet Login" FontFamily="Roboto" FontSize="30" TextColor="WhiteSmoke" FontAttributes="Bold" 
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" Grid.Row="0" />
 
