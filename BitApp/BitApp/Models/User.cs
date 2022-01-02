@@ -17,7 +17,7 @@ namespace BitApp.Models
         public int UserId { get; set; }
         public int PhoneNumber { get; set; }
         public DateTime RegistartionDate { get; set; }
-
+      
         public virtual List<Admin> Admins { get; set; }
         public virtual List<Customer> Customers { get; set; }
     }

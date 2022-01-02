@@ -1,9 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BitApp.ViewModels"
              x:Class="BitApp.Views.SignUpPage"
              NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <local:SignUpViewModel></local:SignUpViewModel>
+    </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Validator" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="FontSize" Value="7"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    
+    
     <ContentPage.Content>
 
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#1A1A1D" Padding="10">
@@ -28,6 +47,8 @@
                     HorizontalOptions="CenterAndExpand" Grid.Row="0" />
 
 
+                    <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="1"/>
+
                     <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#C2CAD0" >
 
                         <Grid>
@@ -40,6 +61,8 @@
                         </Grid>
                     </Frame>
 
+                    <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="1"/>
+                    
                     <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#C2CAD0" >
 
                         <Grid>
@@ -48,7 +71,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Entry Grid.Column="1" Placeholder="Enter Password" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                            <Entry Grid.Column="2" Placeholder="Enter Password" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
                         </Grid>
                     </Frame>
 
