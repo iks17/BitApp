@@ -17,7 +17,7 @@ namespace BitApp.ViewModels
         {
             Email = string.Empty;
             Password = string.Empty;
-            PhoneNumber = default(int);          
+            PhoneNumber = string.Empty;          
             status = string.Empty;
             EmailError = string.Empty;
             PasswordError = string.Empty;
@@ -37,7 +37,7 @@ namespace BitApp.ViewModels
                 EmailError = string.Empty;
                 PasswordError = string.Empty;
 
-                if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password) ||  || string.IsNullOrEmpty(Email)
+                if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(PhoneNumber)
                     || string.IsNullOrEmpty(Password) || !ValidateEmail() )
                 {
 
@@ -172,8 +172,8 @@ namespace BitApp.ViewModels
             }
         }
 
-        private int phoneNumber;
-        public int PhoneNumber
+        private string phoneNumber;
+        public string PhoneNumber
         {
             get => phoneNumber;
             set
