@@ -20,8 +20,13 @@ namespace BitApp.ViewModels
             Password = string.Empty;
             Status = string.Empty;
             LoginCommand = new Command(Login);
-            //ToSignUpCommand = new Command(ToSignUp);
+            ToSignUpCommand = new Command(ToSignUp);
             //ToForgotPassCommand = new Command(ToForgotPass);
+        }
+
+        private void ToSignUp()
+        {
+            Push?.Invoke(new SignUpPage());
         }
 
         private async void Login()

@@ -21,6 +21,7 @@ namespace BitApp.Views
             LoginViewModel lVM = new LoginViewModel();
             BindingContext = lVM;
             lVM.Push += (p) => Navigation.PushAsync(p);
+            //this.BackgroundImageSource = FileImageSource.FromFile("drawable/login.png");
         }
     }
 }
