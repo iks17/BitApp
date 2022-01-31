@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10">
 
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="20" >
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -24,11 +24,10 @@
                     <RowDefinition Height="*"/>
 
 
-
                 </Grid.RowDefinitions>
-                <Label Text="Wallet Login" FontFamily="Roboto" FontSize="30" TextColor="WhiteSmoke" FontAttributes="Bold" 
+                <Label Text="Wallet Login" FontFamily="Roboto" FontSize="15" TextColor="#222831" FontAttributes="Bold" 
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" Grid.Row="0" />
+                    HorizontalOptions="Center" Grid.Row="0" />
 
 
                 <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#00ADB5" >
@@ -58,7 +57,7 @@
                 <Button BackgroundColor="#393E46" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="30" Grid.Row="4" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
 
 
-                <Button BackgroundColor="#393E46" HorizontalOptions="CenterAndExpand"  WidthRequest="200" HeightRequest="30" Grid.Row="8" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto" FontAttributes="Bold"/>
+                <Button BackgroundColor="#393E46" HorizontalOptions="CenterAndExpand"  WidthRequest="250" HeightRequest="30" Grid.Row="8" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto" FontAttributes="Bold"/>
 
 
                 <Button  Text="Forgot Password?" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#EEEEEE" FontAttributes="Bold"  
