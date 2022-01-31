@@ -25,9 +25,11 @@
 
 
                 </Grid.RowDefinitions>
-                <Label Text="Wallet Login" FontFamily="Roboto" FontSize="15" TextColor="#222831" FontAttributes="Bold" 
+                <Label Text="Wallet Login" FontFamily="Roboto" TextDecorations="Underline" FontSize="15" TextColor="#222831" FontAttributes="Bold" 
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="Center" Grid.Row="0" />
+
+                <Image Source="profile.png" Grid.Row="1" WidthRequest="40"/>
 
 
                 <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#00ADB5" >
@@ -57,12 +59,12 @@
                 <Button BackgroundColor="#393E46" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="30" Grid.Row="4" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
 
 
-                <Button BackgroundColor="#393E46" HorizontalOptions="CenterAndExpand"  WidthRequest="250" HeightRequest="30" Grid.Row="8" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto" FontAttributes="Bold"/>
+                <Button BackgroundColor="#393E46" HorizontalOptions="End"  WidthRequest="100" HeightRequest="30" Grid.Row="6" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto" FontAttributes="Bold"/>
 
 
-                <Button  Text="Forgot Password?" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#EEEEEE" FontAttributes="Bold"  
+                <Button Text="Forgot Password?" WidthRequest="100" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#EEEEEE" FontAttributes="Bold"  
                     VerticalOptions="CenterAndExpand" BackgroundColor="#393E46"
-                    HorizontalOptions="CenterAndExpand" Grid.Row="6" />
+                    HorizontalOptions="StartAndExpand" Grid.Row="6" />
 
 
             </Grid>
