@@ -25,7 +25,7 @@
     
     <ContentPage.Content>
 
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#1A1A1D" Padding="10">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10">
             <ScrollView>
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
                     <Grid.RowDefinitions>
@@ -42,14 +42,14 @@
 
 
                     </Grid.RowDefinitions>
-                    <Label Text="Registration" FontFamily="Roboto" FontSize="30" TextColor="WhiteSmoke" FontAttributes="Bold" 
+                    <Label Text="Register" FontFamily="Roboto" FontSize="30" TextColor="#222831" FontAttributes="Bold" 
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" Grid.Row="0" />
 
 
                     <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="1"/>
 
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="1" BackgroundColor="#C2CAD0" >
+                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="1" BackgroundColor="#00ADB5" >
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -62,8 +62,8 @@
                     </Frame>
 
                     <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="2"/>
-                    
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#C2CAD0" >
+
+                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#00ADB5" >
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -77,7 +77,7 @@
 
                     <Label Style="{StaticResource Validator}" Text="{Binding PhoneNumbe}" Grid.Row="3"/>
 
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="3" BackgroundColor="#C2CAD0" >
+                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="3" BackgroundColor="#00ADB5" >
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -90,7 +90,7 @@
                     </Frame>
 
 
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="4" BackgroundColor="#C2CAD0" >
+                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="4" BackgroundColor="#00ADB5" >
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -103,7 +103,7 @@
                     </Frame>
 
                     <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#950740" FontAttributes="Bold"  
-                    VerticalOptions="CenterAndExpand" BackgroundColor="#6482EE"
+                    VerticalOptions="CenterAndExpand" BackgroundColor="#393E46"
                     HorizontalOptions="CenterAndExpand" Grid.Row="5" />
 
 
