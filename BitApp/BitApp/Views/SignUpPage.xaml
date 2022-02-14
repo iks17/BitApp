@@ -104,7 +104,7 @@
                         </Grid>
                     </Frame>
 
-                    <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#950740" FontAttributes="Bold"  
+                    <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="Black" FontAttributes="Bold"  
                     VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
                     HorizontalOptions="CenterAndExpand" Grid.Row="6" />
 
