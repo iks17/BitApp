@@ -11,7 +11,7 @@
 
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Padding="10">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10">
 
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
                 <Grid.RowDefinitions>
