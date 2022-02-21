@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BitApp.ViewModels;
 
 namespace BitApp.Views
 {
@@ -15,6 +16,9 @@ namespace BitApp.Views
         public StartPage()
         {
             InitializeComponent();
+            StartViewModel sPVM = new StartViewModel();
+            BindingContext = sPVM;
+            sPVM.Push += (p) => Navigation.PushAsync(p);
         }
     }
 }
