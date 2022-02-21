@@ -20,11 +20,11 @@
 
 
                 <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30"
-                Grid.Row="9" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
+                Grid.Row="9" Command="{Binding ToLoginPageCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
 
 
                 <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30"
-                Grid.Row="10" Command="{Binding LoginCommand}" Text="Sign Up" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
+                Grid.Row="10" Command="{Binding ToSignUpPageCommand}" Text="Sign Up" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
 
 
 
