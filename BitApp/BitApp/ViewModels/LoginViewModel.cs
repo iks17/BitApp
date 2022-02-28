@@ -39,7 +39,7 @@ namespace BitApp.ViewModels
                 if (u != null)
                 {
                     ((App)App.Current).CurrentUser = u;
-                    Push?.Invoke(new SignUpPage());
+                    Push?.Invoke(new HomePage());
                 }
             }
             catch (Exception)
