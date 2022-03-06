@@ -12,10 +12,9 @@
         <ResourceDictionary>
             <Style x:Key="Validator" TargetType="Label">
                 <Setter Property="TextColor" Value="Red"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
-                <Setter Property="FontSize" Value="7"/>
+                <Setter Property="FontSize" Value="15"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -24,45 +23,41 @@
     
     <ContentPage.Content>
 
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10,30,10,10">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10,40,10,10">
             <ScrollView>
                 <StackLayout Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
- <Image Source="profile.png"  HorizontalOptions="Center" WidthRequest="80"/>
+                    <Image Source="profile.png"  HorizontalOptions="Center" WidthRequest="80"/>
 
-                    <Label Text="   SignUp" FontFamily="Roboto" FontSize="20" TextColor="#47AF83" 
+                    <Label Text="SignUp" FontFamily="Roboto" FontSize="27" TextColor="#47AF83" 
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"  />
+                    HorizontalOptions="StartAndExpand"  Padding="10,5,0,10"/>
 
 
 
-                    <StackLayout>
-                        <Entry  Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                                            <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" />
-                            </StackLayout>
+                    <StackLayout Padding="10,5,0,0">
+                        <Entry  x:Name="Email" Unfocused="Email_Unfocused" Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                        <Label Style="{StaticResource Validator}"  x:Name="emailEr" Text="{ Binding EmailError}"/>
+                    </StackLayout>
 
+                    <StackLayout Padding="10,5,0,0">
+                        <Entry  Placeholder="Enter Password" x:Name="Password" Unfocused="Password_Unfocused"  Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                        <Label Style="{StaticResource Validator}" x:Name="passEr" Text="{Binding PasswordError}" />
 
-                    
-                            <Entry  Placeholder="Enter Password" Text="{Binding User}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                      
+                    </StackLayout> 
 
-                    <Label Style="{StaticResource Validator}" Text="{Binding PhoneNumbe}" />
-
-                    
-
-                            <Entry  Placeholder="Enter Username" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                                           <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" />
-
-
-
-                  
-
-                            <Entry  Placeholder="Enter Phone Number" Text="{Binding ID}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                        
-              </StackLayout>
+                    <StackLayout Padding="10,5,0,0">
+                        <Entry  Placeholder="Enter Username" x:Name="UserName" Unfocused="UserName_Unfocused" Text="{Binding UserName}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                        <Label Style="{StaticResource Validator}"  x:Name="UserEr" />
+                    </StackLayout>
+                    <StackLayout Padding="10,5,0,0">
+                        <Entry x:Name="phone" Unfocused="phone_Unfocused" Placeholder="Enter Phone Number" Text="{Binding PhoneNumber}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                        <Label Style="{StaticResource Validator}" x:Name="phoneEr" Text="{Binding PhoneNumberError}" />
+                    </StackLayout>
+                </StackLayout>
             </ScrollView>
-   <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="Black" FontAttributes="Bold"  
-                    VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
-                    HorizontalOptions="CenterAndExpand" Grid.Row="10" />
+                    <Button  Text="SignUp" WidthRequest="300" HeightRequest="57" FontFamily="Roboto" FontSize="20" TextColor="Black" FontAttributes="Bold"  
+                        VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
+                        HorizontalOptions="CenterAndExpand" Grid.Row="10" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

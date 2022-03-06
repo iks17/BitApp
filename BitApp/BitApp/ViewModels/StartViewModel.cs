@@ -6,7 +6,7 @@ using BitApp.Services;
 using System.Windows.Input;
 using BitApp.Views;
 using Xamarin.Forms;
-
+using BitApp.ViewModels;
 
 namespace BitApp.ViewModels
 {
@@ -21,12 +21,18 @@ namespace BitApp.ViewModels
 
         private void ToSignUpPage()
         {
-            Push?.Invoke(new SignUpPage());
+            Push?.Invoke(new SignUpPage()
+            {
+                BindingContext = new SignUpViewModel()
+            }) ;
         }
 
         private void ToLoginPage()
         {
-            Push?.Invoke(new LoginPage());
+            Push?.Invoke(new LoginPage()
+            {
+                BindingContext = new LoginViewModel()
+            }) ;
         }
 
 
