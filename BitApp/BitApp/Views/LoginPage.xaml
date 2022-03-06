@@ -11,7 +11,7 @@
 
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10,30,10,10">
 
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
                 <Grid.RowDefinitions>
@@ -26,47 +26,33 @@
 
 
                 </Grid.RowDefinitions>
-                <Label Text="           LOGIN" FontFamily="Roboto"  FontSize="20" TextColor="Black" FontAttributes="Bold" 
+                <Label Text="           LOGIN" FontFamily="Roboto"  FontSize="30" TextColor="Black" FontAttributes="Bold" 
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" Grid.Row="1" />
-                <Label Text="                         Welcome To MiniBit" Margin="-20"  FontFamily="Roboto"  FontSize="12" TextColor="#47AF83" 
+                <Label Text="                     Welcome To MiniBit" Margin="-20"  FontFamily="Roboto"  FontSize="20" TextColor="#47AF83" 
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" Grid.Row="2" />
 
-                <Image Source="lock.png" Grid.Row="1" HorizontalOptions="Start" WidthRequest="40"/>
+                <Image Source="lock.png" Grid.Row="1" HorizontalOptions="Start" WidthRequest="60"/>
 
 
-                <Frame HasShadow="false" Padding="5,0" CornerRadius="10" Grid.Row="4" BackgroundColor="#EEEEEE" >
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
                         
-                        <Entry Grid.Column="1" Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                    </Grid>
-                </Frame>
-                <Frame HasShadow="false" Padding="5,0" CornerRadius="10" Grid.Row="6" BackgroundColor="#EEEEEE" >
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                       
-                        <Entry Grid.Column="1" Placeholder="Enter Password" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                    </Grid>
-                </Frame>
+                        <Entry   Grid.Row="8" Placeholder="Enter Email"  Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="15" HorizontalOptions="FillAndExpand"/>
+                    
+                
+                
+                        <Entry  Grid.Row="9" Placeholder="Enter Password" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="15" HorizontalOptions="FillAndExpand" />
+                   
 
 
 
-                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30" Grid.Row="8" Command="{Binding LoginCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
+                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Sign In" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
 
-                <Label Text="Don't have an account?" FontFamily="Roboto"  FontSize="7" TextColor="#47AF83" FontAttributes="Bold" 
+                <Label Text="Don't have an account?" FontFamily="Roboto"  FontSize="14" TextColor="#47AF83" FontAttributes="Bold" 
                     VerticalOptions="Center" 
-                    HorizontalOptions="Center" Grid.Row="9" />
+                    HorizontalOptions="Center" Grid.Row="12" />
 
-                <Button BackgroundColor="#47AF83"  HorizontalOptions="CenterAndExpand"  WidthRequest="150" HeightRequest="30" Grid.Row="10" CornerRadius="10" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="8" FontFamily="Roboto"  FontAttributes="Bold"/>
+                <Button BackgroundColor="#47AF83"  HorizontalOptions="CenterAndExpand"  WidthRequest="250" HeightRequest="50" Grid.Row="13" CornerRadius="10" Command="{Binding ToSignUpCommand}" VerticalOptions="CenterAndExpand" Text="New account" FontSize="14" FontFamily="Roboto"  FontAttributes="Bold"/>
 
 
                 <!--<Button Text="Forgot Password?" WidthRequest="100" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="#EEEEEE" FontAttributes="Bold"  

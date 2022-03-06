@@ -22,98 +22,47 @@
     
     
     
-    
     <ContentPage.Content>
 
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10,30,10,10">
             <ScrollView>
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                <StackLayout Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+ <Image Source="profile.png"  HorizontalOptions="Center" WidthRequest="80"/>
 
-
-
-                    </Grid.RowDefinitions>
                     <Label Text="   SignUp" FontFamily="Roboto" FontSize="20" TextColor="#47AF83" 
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand" Grid.Row="1" />
-
-                    <Image Source="profile.png" Grid.Row="0" HorizontalOptions="Center" WidthRequest="80"/>
-
-
-                    <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="1"/>
-
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="2" BackgroundColor="#EEEEEE" >
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Entry Grid.Column="1" Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-                    </Frame>
-
-                    <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" Grid.Row="2"/>
-
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="3" BackgroundColor="#EEEEEE" >
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Entry Grid.Column="1" Placeholder="Enter Password" Text="{Binding User}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-                    </Frame>
-
-                    <Label Style="{StaticResource Validator}" Text="{Binding PhoneNumbe}" Grid.Row="4"/>
-
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="4" BackgroundColor="#EEEEEE" >
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Entry Grid.Column="1" Placeholder="Enter Username" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-                    </Frame>
-
-
-                    <Frame HasShadow="false" Padding="5,0" CornerRadius="3" Grid.Row="5" BackgroundColor="#EEEEEE" >
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Entry Grid.Column="1" Placeholder="Enter Phone Number" Text="{Binding ID}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
-                        </Grid>
-                    </Frame>
-
-                    <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="Black" FontAttributes="Bold"  
-                    VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
-                    HorizontalOptions="CenterAndExpand" Grid.Row="6" />
+                    HorizontalOptions="StartAndExpand"  />
 
 
 
+                    <StackLayout>
+                        <Entry  Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                                            <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" />
+                            </StackLayout>
 
 
-                </Grid>
+                    
+                            <Entry  Placeholder="Enter Password" Text="{Binding User}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                      
+
+                    <Label Style="{StaticResource Validator}" Text="{Binding PhoneNumbe}" />
+
+                    
+
+                            <Entry  Placeholder="Enter Username" Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                                           <Label Style="{StaticResource Validator}" Text="{Binding EmailError}" />
+
+
+
+                  
+
+                            <Entry  Placeholder="Enter Phone Number" Text="{Binding ID}" HorizontalTextAlignment="Start"  FontSize="Micro" HorizontalOptions="FillAndExpand"/>
+                        
+              </StackLayout>
             </ScrollView>
+   <Button  Text="SignUp" WidthRequest="150" HeightRequest="30" FontFamily="Roboto" FontSize="8" TextColor="Black" FontAttributes="Bold"  
+                    VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
+                    HorizontalOptions="CenterAndExpand" Grid.Row="10" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

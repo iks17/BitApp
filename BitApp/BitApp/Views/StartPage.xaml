@@ -6,7 +6,7 @@
 
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
 
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="20" >
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="20" Padding="0,0,0,100" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -19,12 +19,12 @@
                 </Grid.RowDefinitions>
 
 
-                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30"
-                Grid.Row="9" Command="{Binding ToLoginPageCommand}" Text="Sign In" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
+                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="50"
+                Grid.Row="11" Command="{Binding ToLoginPageCommand}" Text="Sign In" FontSize="16" FontFamily="Robot" FontAttributes="Bold"/>
 
 
-                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="30"
-                Grid.Row="10" Command="{Binding ToSignUpPageCommand}" Text="Sign Up" FontSize="8" FontFamily="Robot" FontAttributes="Bold"/>
+                <Button BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" CornerRadius="10" VerticalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="50"
+                Grid.Row="12" Command="{Binding ToSignUpPageCommand}" Text="Sign Up" FontSize="16" FontFamily="Robot" FontAttributes="Bold"/>
 
 
 
