@@ -4,16 +4,32 @@
              x:Class="BitApp.Views.HomePage" BackgroundImageSource="bg5.png" NavigationPage.HasNavigationBar="False">
     
     <ContentPage.Content>
-        
-        
-        <StackLayout>
-            <Label Margin="0,20,0,0" Text="           Weclome USER" FontFamily="Roboto"  FontSize="30" TextColor="White" FontAttributes="Bold" 
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,30,10,10">
+
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" RowSpacing="15" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="0,-20,0,0" Text="           Weclome USER" FontFamily="Roboto"  FontSize="30" TextColor="White" FontAttributes="Bold" 
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" Grid.Row="1" />
 
+                <Button  BackgroundColor="#47AF83" HorizontalOptions="StartAndExpand" VerticalOptions="Center" CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Send" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
+                <Button  BackgroundColor="#47AF83" HorizontalOptions="EndAndExpand" VerticalOptions="Center"  CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Receive" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
 
+                </Grid>
+                
         </StackLayout>
+
+               
     </ContentPage.Content>
-    
-    
+
 </ContentPage>
