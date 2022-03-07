@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BitApp.Views.HomePage" BackgroundImageSource="bg5.png" NavigationPage.HasNavigationBar="False">
+             x:Class="BitApp.Views.HomePage" BackgroundImageSource="bg10.png" NavigationPage.HasNavigationBar="False" >
     
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,30,10,10">
@@ -16,14 +16,30 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Margin="0,-20,0,0" Text="           Weclome USER" FontFamily="Roboto"  FontSize="30" TextColor="White" FontAttributes="Bold" 
+                <Label Margin="0,-20,0,0" Text="           Weclome Itay21" FontFamily="Roboto"  FontSize="30" TextColor="White" FontAttributes="Bold" 
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" Grid.Row="1" />
 
-                <Button  BackgroundColor="#47AF83" HorizontalOptions="StartAndExpand" VerticalOptions="Center" CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Send" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
-                <Button  BackgroundColor="#47AF83" HorizontalOptions="EndAndExpand" VerticalOptions="Center"  CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Receive" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
+                <ImageButton Source="slogo.png" BackgroundColor="#003154" HorizontalOptions="EndAndExpand" VerticalOptions="Center"  WidthRequest="40" HeightRequest="40" Grid.Row="4" Command="{Binding LoginCommand}"/>
+
+
+             
+                
+                <Label Margin="50,0,0,0" Text="$" FontFamily="Roboto"  FontSize="50" TextColor="White" FontAttributes="Bold" 
+                    VerticalOptions="Start" 
+                    HorizontalOptions="StartAndExpand" Grid.Row="4" />
+
+                <Label Margin="0,0,0,0" Text="10000" FontFamily="Roboto"  FontSize="50" TextColor="White" FontAttributes="Bold" 
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" Grid.Row="4" />
+
+                <Button Margin="0,20,0,0" BackgroundColor="#47AF83" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" CornerRadius="10"  WidthRequest="300" HeightRequest="50" Grid.Row="11" Command="{Binding LoginCommand}" Text="Add Balance" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
+
+                <Button  BackgroundColor="#47AF83" HorizontalOptions="StartAndExpand" VerticalOptions="Center" CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="10" Command="{Binding LoginCommand}" Text="Send" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
+                <Button  BackgroundColor="#47AF83" HorizontalOptions="EndAndExpand" VerticalOptions="Center"  CornerRadius="10"  WidthRequest="175" HeightRequest="50" Grid.Row="10" Command="{Binding LoginCommand}" Text="Receive" FontSize="14" FontFamily="Robot" FontAttributes="Bold"/>
 
                 </Grid>
                 
