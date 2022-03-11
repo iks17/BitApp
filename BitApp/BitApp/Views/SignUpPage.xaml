@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BitApp.ViewModels"
              x:Class="BitApp.Views.SignUpPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1C375C">
+    
     <ContentPage.BindingContext>
         <local:SignUpViewModel></local:SignUpViewModel>
     </ContentPage.BindingContext>
@@ -22,15 +24,80 @@
     
     
     <ContentPage.Content>
+        
+            
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" Padding="10,40,10,10">
+            <Image Grid.Row="0" Margin="0,-50" Source="logo.png" Aspect="AspectFit" HeightRequest="300" WidthRequest="00"></Image>
+            
+          
+                
+                <Frame Grid.Row="1" Margin="0,-20,0,-50" BorderColor="#003154" HasShadow="True"  CornerRadius="50" HeightRequest="100">
+               
+                    <ScrollView>
+                    
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15" Padding="10,40,10,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        
+                    </Grid.RowDefinitions>
+
+
+                    <Label Grid.Row="0"  Text="SignUp" FontSize="24" FontAttributes="Bold" TextColor="#003154" HorizontalOptions="CenterAndExpand"></Label>
+
+
+                    <Label Grid.Row="1" Margin="0,-15,0,0" Text="Fill your details below" TextColor="#003154"  HorizontalOptions="CenterAndExpand"></Label>
+             
+
+                    <Entry Grid.Row="2" x:Name="Email" Unfocused="Email_Unfocused" Placeholder="Enter Email" Text="{Binding Email}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                    <Label Grid.Row="3" Style="{StaticResource Validator}"  x:Name="emailEr" Text="{ Binding EmailError}"/>
+
+                    <Entry Grid.Row="4" Placeholder="Enter Password" x:Name="Password" Unfocused="Password_Unfocused"  Text="{Binding Password}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                    <Label Grid.Row="5" Style="{StaticResource Validator}" x:Name="passEr" Text="{Binding PasswordError}" />
+
+                    <Entry Grid.Row="6" Placeholder="Enter Username" x:Name="UserName" Unfocused="UserName_Unfocused" Text="{Binding UserName}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                    <Label Grid.Row="7" Style="{StaticResource Validator}"  x:Name="UserEr" />
+
+                    <Entry Grid.Row="8" x:Name="phone" Unfocused="phone_Unfocused" Placeholder="Enter Phone Number" Text="{Binding PhoneNumber}" HorizontalTextAlignment="Start"  FontSize="18" HorizontalOptions="FillAndExpand"/>
+                    <Label Grid.Row="9" Style="{StaticResource Validator}" x:Name="phoneEr" Text="{Binding PhoneNumberError}" />
+
+    
+
+
+                    <Button Grid.Row="10" Text="SignUp" Command="{Binding LoginCommand}" Margin="0,0,0,20" BackgroundColor="#003154" CornerRadius="20"></Button>
+
+
+                </Grid>
+            </ScrollView>
+            </Frame>
+           
+        </Grid>
+        
+
+        <!--<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#003154" Padding="10,40,10,10">
             <ScrollView>
                 <StackLayout Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                    <Image Source="profile.png"  HorizontalOptions="Center" WidthRequest="80"/>
+                    <Image Source="logo.png"  HorizontalOptions="Center" Margin="0,-80,0,-70" WidthRequest="300"/>
 
                     <Label Text="SignUp" FontFamily="Roboto" FontSize="27" TextColor="#47AF83" 
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"  Padding="10,5,0,10"/>
+                    HorizontalOptions="StartAndExpand"  Padding="0,0,0,20"/>
 
 
 
@@ -58,6 +125,7 @@
                     <Button  Text="SignUp" WidthRequest="300" HeightRequest="57" FontFamily="Roboto" FontSize="20" TextColor="Black" FontAttributes="Bold"  
                         VerticalOptions="CenterAndExpand" CornerRadius="10"  BackgroundColor="#47AF83"
                         HorizontalOptions="CenterAndExpand" Grid.Row="10" />
-        </StackLayout>
+        </StackLayout>-->
+        
     </ContentPage.Content>
 </ContentPage>
