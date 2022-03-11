@@ -22,7 +22,8 @@ namespace BitApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+
+            MainPage = new NavigationPage(new DashboardPage());
         }
         
 
@@ -37,5 +38,6 @@ namespace BitApp
         protected override void OnResume()
         {
         }
+        
     }
 }
