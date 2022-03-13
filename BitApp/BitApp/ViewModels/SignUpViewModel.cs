@@ -197,7 +197,8 @@ namespace BitApp.ViewModels
                     User user = new User
                     {
                         Email = Email,                       
-                        Password = Password,                  
+                        Password = Password,
+                        UserName = username,
                         PhoneNumber = PhoneNumber,
                   
                         Admins = new List<Admin>(),
