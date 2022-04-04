@@ -48,17 +48,15 @@
                     <Label Grid.Row="1" Grid.Column="0" Text="$ 6,750.00" FontAttributes="Bold" FontSize="30"/>
                     <Label Grid.Row="1" Grid.Column="1" Text="..." HorizontalOptions="End" />
 
-                    
 
-                    <!-- 4. Cards-->
+
                     <Label Grid.Row="2" Grid.Column="0" Text="CARDS" TextColor="Silver" Margin="0,20,0,0"/>
-                    
-                    
-                    
                 </Grid>
                 <Image Grid.Row="2" Source="Credit.png" HeightRequest="350" Margin="0,-250,0,0"/>
+                
+                
 
-                <!--Bottom menu-->
+                <!--NavBar-->
                 <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" RowDefinitions="Auto" Margin="0,0,0,0" ColumnDefinitions="*,Auto,*" VerticalOptions="EndAndExpand">
                     <Image Grid.Row="0" Grid.Column="0" HeightRequest="25" Source="home.png" BackgroundColor="Transparent" />
                     <Button Grid.Row="0" Grid.Column="1" ImageSource="PFP1.png" TextColor="Black" BackgroundColor="#ff7114" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
