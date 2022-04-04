@@ -8,30 +8,28 @@
         <ScrollView>
             <StackLayout BackgroundColor="#fbfaff">
 
-                <!-- 1. Profile Picture-->
+               
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="300"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Source="User.png" VerticalOptions="Start" Aspect="AspectFill" Margin="0,0,0,0"/>
-                    <Label Grid.Row="0" VerticalOptions="End" Padding="20,20,20,50">
+                    <Image Grid.Row="0" Source="PFP1.png" VerticalOptions="Start" Aspect="AspectFill" Margin="0,0,0,0"/>
+                    <Label Grid.Row="0" VerticalOptions="End" Padding="20,20,20,80">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Itay Koski &#10;" FontSize="25" FontAttributes="Bold" ForegroundColor="White" />
+                                <Span Text="Itay Koski &#10;" FontSize="25" FontAttributes="Bold" ForegroundColor="White"  />
                                 <Span Text="ID 1234567" FontSize="17" ForegroundColor="White" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                 </Grid>
 
-                <!-- Here add the code that is being explained in the next block-->
-
-                <!-- 2. Contact information frame-->
+              
                 <Frame CornerRadius="20" Margin="0,-50,0,0" BackgroundColor="#fbfaff" HasShadow="False" HeightRequest="19"/>
 
-                <!-- Here add the code that is being explained in the next block-->
+               
 
-                <!-- It will contain blocks: 3, 4 and 5 -->
+              
                 <Grid Margin="30,-20,30,10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -45,12 +43,12 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <!-- 3. Your balance -->
+                   
                     <Label Grid.Row="0" Grid.Column="0" Text="Your balance" TextColor="Silver"/>
                     <Label Grid.Row="1" Grid.Column="0" Text="$ 6,750.00" FontAttributes="Bold" FontSize="30"/>
                     <Label Grid.Row="1" Grid.Column="1" Text="..." HorizontalOptions="End" />
 
-                    <!-- Here add the code that is being explained in the next block-->
+                    
 
                     <!-- 4. Cards-->
                     <Label Grid.Row="2" Grid.Column="0" Text="CARDS" TextColor="Silver" Margin="0,20,0,0"/>
@@ -60,36 +58,13 @@
                 </Grid>
                 <Image Grid.Row="2" Source="Credit.png" HeightRequest="350" Margin="0,-250,0,0"/>
 
-                <!-- 5. History-->
-                <Label Grid.Row="4" Grid.Column="0" Text="HISTORY" TextColor="Silver"/>
-                <Image Grid.Row="4" Grid.Column="1" Source="Refresh" HorizontalOptions="End" />
-                <CollectionView Grid.Row="5"
-                            BackgroundColor="#fbfaff"
-                            ItemsSource="{Binding history}"
-                            VerticalOptions="Center"
-                            HeightRequest="240">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid BackgroundColor="White">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding Picture}" WidthRequest="80" HorizontalOptions="Start"/>
-                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Name}" Padding="20,0,0,0" HorizontalOptions="Start"/>
-                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Price}" Padding="20,0,0,0" HorizontalOptions="Start" TextColor="Red" FontAttributes="Bold"/>
-                                <Label Grid.Column="2" Grid.Row="0" Text="Date" HorizontalOptions="End"/>
-                                <Label Grid.Column="2" Grid.Row="1" Text="{Binding Date}" HorizontalOptions="End" TextColor="Silver"/>
+                <!--Bottom menu-->
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" RowDefinitions="Auto" Margin="0,0,0,0" ColumnDefinitions="*,Auto,*" VerticalOptions="EndAndExpand">
+                    <Image Grid.Row="0" Grid.Column="0" HeightRequest="25" Source="home.png" BackgroundColor="Transparent" />
+                    <Button Grid.Row="0" Grid.Column="1" ImageSource="PFP1.png" TextColor="Black" BackgroundColor="#ff7114" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
+                    <Image Grid.Row="0" Grid.Column="2" HeightRequest="25" Source="swapicon.png" BackgroundColor="Transparent"/>
+                </Grid>
 
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
 
             </StackLayout>
         </ScrollView>
