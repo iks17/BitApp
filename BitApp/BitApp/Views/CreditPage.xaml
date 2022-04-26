@@ -8,7 +8,7 @@
 
         <Grid>
 
-            <Grid Grid.Row="0" Margin="0,0,0,60" BackgroundColor="#1f3a93" >
+            <Grid Grid.Row="0" Margin="0,0,0,60" BackgroundColor="#1C375C" >
                 <StackLayout>
 
                     <Frame Margin="20" BackgroundColor="#24252a" CornerRadius="20" WidthRequest="250" HeightRequest="200">
@@ -24,7 +24,7 @@
 
                                 <Label Text="1234" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
                             </StackLayout>
-                            <Label Text="Andy Poquis" TextColor="White"></Label>
+                            <Label Text="Name Name" TextColor="White"></Label>
                         </StackLayout>
 
                     </Frame>
@@ -35,40 +35,40 @@
                 <StackLayout Orientation="Vertical" Margin="20,20" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
                         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                            <Label Text="NAME" TextColor="#e87e04"></Label>
-                            <Label Text="Andy Poquis" ></Label>
+                            <Label Text="NAME                             " TextColor="Black"></Label>
+                            <Entry  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                         </StackLayout>
 
-                        <StackLayout Orientation="Vertical" >
-                            <Label Text="CARD-ID" TextColor="#e87e04"></Label>
-                            <Label Text="VISA-Chase" ></Label>
+                        <StackLayout Orientation="Vertical" Margin="45,0" >
+                            <Label Text="CARD-Type" TextColor="Black"></Label>
+                            <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                         </StackLayout>
 
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
                         <StackLayout Orientation="Vertical">
-                            <Label Text="CARD NUMBER" TextColor="#e87e04"></Label>
-                            <Label Text="****   ****    ****    1234" ></Label>
+                            <Label Text="CARD NUMBER             " TextColor="Black"></Label>
+                            <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                         </StackLayout>
 
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                            <Label Text="EXPIRATION DATE" TextColor="#e87e04" ></Label>
-                            <Label Text="29/11/2020" ></Label>
+                            <Label Text="EXPIRATION DATE        " TextColor="Black" ></Label>
+                            <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical" Margin="45,0">
-                            <Label Text="CVV" TextColor="#e87e04"></Label>
-                            <Label Text="321" ></Label>
+                            <Label Text="    CVV    " TextColor="Black"></Label>
+                            <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> </Entry>
                         </StackLayout>
 
 
                     </StackLayout>
 
-                    <Button Text="Add Credit Card" Margin="60,60,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"></Button>
+                    <Button Text="Add Credit Card" Margin="60,40,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"></Button>
 
                 </StackLayout>
 

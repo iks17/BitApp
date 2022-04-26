@@ -30,7 +30,7 @@
                
 
               
-                <Grid Margin="30,-20,30,10">
+                <Grid Margin="30,-50,30,10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -71,6 +71,7 @@
 
                 </Frame>
 
+                <Button Text="Add Card" Margin="50,0,50,20" BackgroundColor="Silver" CornerRadius="20"></Button>
 
             </StackLayout>
         </ScrollView>
