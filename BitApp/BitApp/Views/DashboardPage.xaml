@@ -48,20 +48,28 @@
                     <Label Grid.Row="1" Grid.Column="0" Text="$ 6,750.00" FontAttributes="Bold" FontSize="30"/>
                     <Label Grid.Row="1" Grid.Column="1" Text="..." HorizontalOptions="End" />
 
-
-
                     <Label Grid.Row="2" Grid.Column="0" Text="CARDS" TextColor="Silver" Margin="0,20,0,0"/>
                 </Grid>
-                <Image Grid.Row="2" Source="Credit.png" HeightRequest="350" Margin="0,-250,0,0"/>
-                
-                
 
-                <!--NavBar-->
-                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" RowDefinitions="Auto" Margin="0,0,0,0" ColumnDefinitions="*,Auto,*" VerticalOptions="EndAndExpand">
-                    <Image Grid.Row="0" Grid.Column="0" HeightRequest="25" Source="home.png" BackgroundColor="Transparent" />
-                    <Button Grid.Row="0" Grid.Column="1" ImageSource="PFP1.png" TextColor="Black" BackgroundColor="#ff7114" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
-                    <Image Grid.Row="0" Grid.Column="2" HeightRequest="25" Source="swapicon.png" BackgroundColor="Transparent"/>
-                </Grid>
+               
+
+                <Frame Margin="20,-200,20,50" BackgroundColor="#24252a" CornerRadius="20" WidthRequest="250" HeightRequest="200">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="VISA" FontSize="Title" TextColor="White" FontAttributes="Bold" ></Label>
+                        <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
+                            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0" >
+                                <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                            </StackLayout>
+
+                            <Label Text="1234" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
+                        </StackLayout>
+                        <Label Text="Itay Koski" TextColor="White"></Label>
+                    </StackLayout>
+
+                </Frame>
 
 
             </StackLayout>

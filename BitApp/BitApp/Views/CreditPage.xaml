@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BitApp.Views.CreditPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid Grid.Row="0" Margin="0,0,0,60" BackgroundColor="#1f3a93" >
+                <StackLayout>
+
+                    <Frame Margin="20" BackgroundColor="#24252a" CornerRadius="20" WidthRequest="250" HeightRequest="200">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="VISA" FontSize="Title" TextColor="White" FontAttributes="Bold" ></Label>
+                            <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0" >
+                                    <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                    <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                    <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                    <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
+                                </StackLayout>
+
+                                <Label Text="1234" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
+                            </StackLayout>
+                            <Label Text="Andy Poquis" TextColor="White"></Label>
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+
+            </Grid >
+            <Grid Grid.Row="1"  Margin="20,-60">
+                <StackLayout Orientation="Vertical" Margin="20,20" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                            <Label Text="NAME" TextColor="#e87e04"></Label>
+                            <Label Text="Andy Poquis" ></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" >
+                            <Label Text="CARD-ID" TextColor="#e87e04"></Label>
+                            <Label Text="VISA-Chase" ></Label>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="CARD NUMBER" TextColor="#e87e04"></Label>
+                            <Label Text="****   ****    ****    1234" ></Label>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                            <Label Text="EXPIRATION DATE" TextColor="#e87e04" ></Label>
+                            <Label Text="29/11/2020" ></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Margin="45,0">
+                            <Label Text="CVV" TextColor="#e87e04"></Label>
+                            <Label Text="321" ></Label>
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                    <Button Text="Add Credit Card" Margin="60,60,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"></Button>
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

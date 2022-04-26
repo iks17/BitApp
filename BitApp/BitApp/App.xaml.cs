@@ -23,7 +23,7 @@ namespace BitApp
             InitializeComponent();
 
 
-            MainPage = new NavigationPage(new SwapPage());
+            MainPage = new NavigationPage(new DashboardPage());
         }
         
 
