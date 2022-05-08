@@ -14,13 +14,8 @@
                         <RowDefinition Height="300"/>
                     </Grid.RowDefinitions>
                     <Image Grid.Row="0" Source="PFP1.png" VerticalOptions="Start" Aspect="AspectFill" Margin="0,0,0,0"/>
-                    <Label Grid.Row="0" VerticalOptions="End" Padding="20,20,20,80">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Itay Koski &#10;" FontSize="25" FontAttributes="Bold" ForegroundColor="White"  />
-                                <Span Text="ID 1234567" FontSize="17" ForegroundColor="White" />
-                            </FormattedString>
-                        </Label.FormattedText>
+                    <Label Text="{Binding UserName,StringFormat='{0} &#10;'}" Grid.Row="0" VerticalOptions="End" Padding="20,20,20,80">
+                       
                     </Label>
                 </Grid>
 
@@ -45,7 +40,7 @@
                     </Grid.RowDefinitions>
                    
                     <Label Grid.Row="0" Grid.Column="0" Text="Your balance" TextColor="Silver"/>
-                    <Label Grid.Row="1" Grid.Column="0" Text="$ 6,750.00" FontAttributes="Bold" FontSize="30"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding TotalBalance,StringFormat='{0:0.00}'}" FontAttributes="Bold" FontSize="30"/>
                     <Label Grid.Row="1" Grid.Column="1" Text="..." HorizontalOptions="End" />
 
                     <Label Grid.Row="2" Grid.Column="0" Text="CARDS" TextColor="Silver" Margin="0,20,0,0"/>

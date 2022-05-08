@@ -15,6 +15,7 @@ namespace BitApp.Views
         public HomePage()
         {
             InitializeComponent();
+            
         }
     }
 }

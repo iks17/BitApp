@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BitApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace BitApp.Views
         public DashboardPage()
         {
             InitializeComponent();
+            this.BindingContext = new HomeViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((HomeViewModel)this.BindingContext).OnAppearing();
         }
     }
 }

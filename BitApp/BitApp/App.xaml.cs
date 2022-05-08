@@ -23,7 +23,7 @@ namespace BitApp
             InitializeComponent();
 
 
-            MainPage = new MainTab();
+            MainPage = new LoginPage();
         }
         
 
