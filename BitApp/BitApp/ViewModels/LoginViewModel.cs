@@ -39,10 +39,11 @@ namespace BitApp.ViewModels
                 if (u != null)
                 {
                     ((App)App.Current).CurrentUser = u;
-                    Push?.Invoke(new DashboardPage());
+                    //     Push?.Invoke(new DashboardPage());
+                    ((App)App.Current).MainPage = new MainTab();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Status = "Something went wrong...";
             }
