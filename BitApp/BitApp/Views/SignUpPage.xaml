@@ -25,7 +25,7 @@
     
     <ContentPage.Content>
         
-            
+            <!--add choose account to open-->
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>

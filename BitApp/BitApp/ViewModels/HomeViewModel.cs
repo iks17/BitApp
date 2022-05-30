@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using BitApp.Services;
+using System.Linq;
+using BitApp.Models;
 
 namespace BitApp.ViewModels
 {
     class HomeViewModel : BaseViewModel
     {
+        private Customer customer;
         private double totalBalance;
         public double TotalBalance
         {
@@ -37,6 +40,9 @@ namespace BitApp.ViewModels
         public HomeViewModel()
         {
             UserName = ((App)App.Current).CurrentUser.UserName;
+            customer = ((App)App.Current).CurrentUser.Customers.FirstOrDefault();
+           
+            
             OnAppearingEvent += TotalBalanceUpdate;
         }
         private async void TotalBalanceUpdate()

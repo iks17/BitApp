@@ -23,7 +23,20 @@ namespace BitApp.ViewModels
         }
         #endregion
         #region Properties
-        
+        private bool isPrivateAccount;
+        public bool IsPrivateAccount
+        {
+            get => isPrivateAccount;
+            set
+            {
+                if (isPrivateAccount != value)
+                {
+                    isPrivateAccount = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private string email;
 
         public string Email
@@ -157,8 +170,8 @@ namespace BitApp.ViewModels
         #endregion
         public SignUpViewModel()
         {
-            
-            
+
+            IsPrivateAccount = true;
 
             SignUpCommand = new Command(SignUp);
 
@@ -205,7 +218,42 @@ namespace BitApp.ViewModels
                         Customers = new List<Customer>()
                     };
 
+                    Customer customer = new Customer
+                    {
+                        TransactionLogReceivers = new List<TransactionLog>(),
+                        TransactionLogSenders = new List<TransactionLog>(),
 
+
+
+
+                    };
+                    user.Customers.Add(customer);
+
+                    if(IsPrivateAccount)
+                    {
+                        PrivateAccount pa = new PrivateAccount
+                        {
+                            AnualIncome = 0,
+                            Loans = new List<Loan>(),
+                            MainCurrency = "ILS",
+                            TotalBalance = 0
+
+
+
+                        };
+                        customer.PrivateAccounts.Add(pa);
+                    }
+                    else
+                    {
+                        BusinessAccount ba = new BusinessAccount()
+                        {
+                            TotalBalance = 0,
+                            ActiveManagersNum = 0,
+                            MainCurrency = "ILS",
+                            NetWorth = 0,
+                            AnualIncome = 0
+                        };
+                    }
 
                     bool b = await proxy.SignUpAsync(user);
                     Status = "Signing you up...";
