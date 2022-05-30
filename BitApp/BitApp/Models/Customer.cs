@@ -22,6 +22,7 @@ namespace BitApp.Models
         public string Gender { get; set; }
         public int UserId { get; set; }
 
+      //  public string UserName { get; set; }
         public virtual User User { get; set; }
         public virtual List<BusinessAccount> BusinessAccounts { get; set; }
         public virtual List<PrivateAccount> PrivateAccounts { get; set; }

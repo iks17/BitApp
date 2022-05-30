@@ -220,8 +220,16 @@ namespace BitApp.ViewModels
 
                     Customer customer = new Customer
                     {
+                        //Address = string.Empty,
+                        //Country=string.Empty,
+                        // Gender=string.Empty,
+                        //  FirstName=string.Empty,
+                        //  UserName=user.UserName,
+
+
                         TransactionLogReceivers = new List<TransactionLog>(),
                         TransactionLogSenders = new List<TransactionLog>(),
+                       
 
 
 
@@ -231,8 +239,12 @@ namespace BitApp.ViewModels
 
                     if(IsPrivateAccount)
                     {
-                        PrivateAccount pa = new PrivateAccount
+                        customer.PrivateAccounts = new List<PrivateAccount>();
+                       PrivateAccount pa = new PrivateAccount
                         {
+                            //AccountId="1",
+                            // DateOfBirth=DateTime.Now,
+            
                             AnualIncome = 0,
                             Loans = new List<Loan>(),
                             MainCurrency = "ILS",
@@ -245,16 +257,25 @@ namespace BitApp.ViewModels
                     }
                     else
                     {
+                        customer.BusinessAccounts = new List<BusinessAccount>();
                         BusinessAccount ba = new BusinessAccount()
                         {
+                             //AccountId="1",
+                             // BusibessAdress=string.Empty,
+                             //  BusinessEmail=string.Empty,
+                             //   BusinessName=string.Empty,
+                             //    BusinessOpenDate=DateTime.Now,
+                             //     BusinessPassword=string.Empty,
+                                  
                             TotalBalance = 0,
                             ActiveManagersNum = 0,
                             MainCurrency = "ILS",
                             NetWorth = 0,
                             AnualIncome = 0
                         };
+                        customer.BusinessAccounts.Add(ba);
                     }
-
+                   
                     bool b = await proxy.SignUpAsync(user);
                     Status = "Signing you up...";
                     if (b)

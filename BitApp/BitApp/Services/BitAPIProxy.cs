@@ -117,6 +117,7 @@ namespace BitApp.Services
             {
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
+                    ReferenceHandler=ReferenceHandler.Preserve,
                     PropertyNameCaseInsensitive = true
                 };
                 string json = JsonSerializer.Serialize<User>(user, options);
