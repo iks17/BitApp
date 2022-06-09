@@ -213,8 +213,6 @@ namespace BitApp.ViewModels
                         Password = Password,
                         UserName = username,
                         PhoneNumber = PhoneNumber,
-                  
-                        Admins = new List<Admin>(),
                         Customers = new List<Customer>()
                     };
 
@@ -245,9 +243,6 @@ namespace BitApp.ViewModels
                             //AccountId="1",
                             // DateOfBirth=DateTime.Now,
             
-                            AnualIncome = 0,
-                            Loans = new List<Loan>(),
-                            MainCurrency = "ILS",
                             TotalBalance = 0
 
 
@@ -268,10 +263,7 @@ namespace BitApp.ViewModels
                              //     BusinessPassword=string.Empty,
                                   
                             TotalBalance = 0,
-                            ActiveManagersNum = 0,
-                            MainCurrency = "ILS",
-                            NetWorth = 0,
-                            AnualIncome = 0
+                           
                         };
                         customer.BusinessAccounts.Add(ba);
                     }
