@@ -5,6 +5,7 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
+        <ScrollView>
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,0,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -29,8 +30,8 @@
 
 
             <Entry Grid.Row="3" Placeholder="phone number" Text="{Binding PhoneNumber}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-            <Entry Grid.Row="4" Placeholder="Amount" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-            <Button Grid.Row="5" Text="SEND" BackgroundColor="#1C375C" TextColor="White" CornerRadius="20"/>
+            <Entry Grid.Row="4" Placeholder="Amount" Text="{Binding AmountStr}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Button Grid.Row="5" Command="{Binding transferCommand}" Text="SEND" BackgroundColor="#1C375C" TextColor="White" CornerRadius="20"/>
 
 
             <Label Grid.Row="6"  Text="Receive" Margin="0,20,0,0" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"/>
@@ -39,5 +40,6 @@
             <Entry Grid.Row="8" Placeholder="5135352523423423" HorizontalTextAlignment="Center" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsReadOnly="true"/>
 
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

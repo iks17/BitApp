@@ -41,6 +41,36 @@ namespace BitApp.ViewModels
                 }
             }
         }
-        
+        private string amountStr;
+        public string AmountStr { get=>amountStr; set 
+            {
+                if(amountStr != value)
+                {
+                    amountStr = value;
+                    OnPropertyChanged(nameof(AmountStr));
+                }
+            } }
+        public ICommand transferCommand => new Command(transferMoney);
+        public async void transferMoney()
+        {
+            try 
+            { 
+                BitAPIProxy proxy = BitAPIProxy.CreateProxy();
+                if(amountStr==""|| amountStr == " " || amountStr == null)
+                {
+                    //show error with value
+                    return;
+                }
+                int amount = int.Parse(AmountStr);
+                bool con = await proxy.SendMoney(amount,PhoneNumber) ;
+            }
+            catch(Exception e)
+            {
+                //shoe error message
+            }
+
+
+
+        }
     }
 }
