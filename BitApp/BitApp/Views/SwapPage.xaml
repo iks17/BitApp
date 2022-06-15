@@ -29,13 +29,14 @@
 
 
             <Entry Grid.Row="3" Placeholder="phone number" Text="{Binding PhoneNumber}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-            <Button Grid.Row="4" Text="SEND" BackgroundColor="#1C375C" TextColor="White" CornerRadius="20"/>
+            <Entry Grid.Row="4" Placeholder="Amount" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="5" Text="SEND" BackgroundColor="#1C375C" TextColor="White" CornerRadius="20"/>
 
 
-            <Label Grid.Row="5"  Text="Receive" Margin="0,20,0,0" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="6"  Text="Receive" Margin="0,20,0,0" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"/>
 
-            <Label Grid.Row="6" FontSize="25" Text="Your User ID is:" TextColor="#1C375C" FontAttributes="Bold" TextDecorations="Underline" HorizontalOptions="CenterAndExpand"/>
-            <Entry Grid.Row="7" Placeholder="5135352523423423" HorizontalTextAlignment="Center" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsReadOnly="true"/>
+            <Label Grid.Row="7" FontSize="25" Text="Your User ID is:" TextColor="#1C375C" FontAttributes="Bold" TextDecorations="Underline" HorizontalOptions="CenterAndExpand"/>
+            <Entry Grid.Row="8" Placeholder="5135352523423423" HorizontalTextAlignment="Center" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsReadOnly="true"/>
 
         </Grid>
     </ContentPage.Content>
