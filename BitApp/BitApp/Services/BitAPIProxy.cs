@@ -200,5 +200,25 @@ namespace BitApp.Services
                 return -1;
             }
         }
+        public async Task<bool> SendMoney(int amount, string phoneNumber)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/TransferMoney?amount={amount}&phoneNumber={phoneNumber}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BitApp.Models.Admin">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABEAAAAAAAAAAAAAgAAAAAAABAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\Admin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BitApp.Models.BusinessAccount">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAgAAAAAAAAAAABAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\BusinessAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BitApp.Models.Card">
+    <Position X="10.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAwAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>Models\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BitApp.Models.Customer">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAAAAAAAAAEAAAgAAAAAABAAAQAgAAgAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BusinessAccounts" />
+      <Property Name="PrivateAccounts" />
+      <Property Name="TransactionLogReceivers" />
+      <Property Name="TransactionLogSenders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BitApp.Models.Loan">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAMAAEAAAAAAAAgAIAAAEAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\Loan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Business" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BitApp.Models.PrivateAccount">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAgAAAAAAAAAAABAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\PrivateAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Customer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BitApp.Models.TransactionLog">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="Sender" Type="BitApp.Models.Customer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="5.516" />
+        <Point X="11.62" Y="5.516" />
+        <Point X="11.62" Y="4.687" />
+        <Point X="11.875" Y="4.687" />
+        <Point X="11.875" Y="3.94" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAIACACAAAAAAAFAAAAAAAgFAAIAAA=</HashCode>
+      <FileName>Models\TransactionLog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Receiver" />
+      <Property Name="Sender" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BitApp.Models.User">
+    <Position X="1" Y="2" Width="1.5" />
+    <AssociationLine Name="Customers" Type="BitApp.Models.Customer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.162" />
+        <Point X="2.875" Y="3.162" />
+        <Point X="2.875" Y="1.5" />
+        <Point X="7.917" Y="1.5" Type="JumpStart" />
+        <Point X="8.083" Y="1.5" Type="JumpEnd" />
+        <Point X="11.125" Y="1.5" />
+        <Point X="11.125" Y="2.313" />
+        <Point X="11.5" Y="2.313" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAAAAAAQAgAAAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Customers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
