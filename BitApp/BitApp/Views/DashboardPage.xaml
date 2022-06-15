@@ -61,12 +61,15 @@
 
                             <Label Text="1234" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
                         </StackLayout>
-                        <Label Text="Itay Koski" TextColor="White"></Label>
+                        <Label Text="{Binding UserName}" TextColor="White"></Label>
                     </StackLayout>
 
                 </Frame>
-
-                <Button Text="Add Card" Margin="50,0,50,20" BackgroundColor="Silver" CornerRadius="20"></Button>
+                <StackLayout Padding="10,0,10,0" >
+                    <Entry Text="" Placeholder="Enter amount to add to your bit app acount"/>
+                    <Button Text="Add to your balance" Margin="60,0,60,0" Command="{Binding MoneyToMe}" TextColor="White" CornerRadius="20" BackgroundColor="#013243"/>
+                    <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
+                </StackLayout>
 
             </StackLayout>
         </ScrollView>

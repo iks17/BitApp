@@ -243,7 +243,7 @@ namespace BitApp.ViewModels
                             //AccountId="1",
                             // DateOfBirth=DateTime.Now,
             
-                            TotalBalance = 0
+                            TotalBalance = 200
 
 
 
@@ -262,7 +262,7 @@ namespace BitApp.ViewModels
                              //    BusinessOpenDate=DateTime.Now,
                              //     BusinessPassword=string.Empty,
                                   
-                            TotalBalance = 0,
+                            TotalBalance = 200,
                            
                         };
                         customer.BusinessAccounts.Add(ba);

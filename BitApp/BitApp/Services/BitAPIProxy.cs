@@ -220,5 +220,45 @@ namespace BitApp.Services
                 return false;
             }
         }
+        public async Task<List<TransactionLog>> GetUserReceivedTransaction()
+        {
+            HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetUserReceivedTransaction");
+            if(response.IsSuccessStatusCode)
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve, //avoid reference loops!
+                    PropertyNameCaseInsensitive = true
+                };
+                string content = await response.Content.ReadAsStringAsync();
+                List<TransactionLog> transactionLogs=JsonSerializer.Deserialize<List<TransactionLog>>(content,options);
+                return transactionLogs;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        public async Task<bool> SendMoney(int amount)
+        {
+            try
+            {
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/SendMoneyToMe?amount={amount}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }

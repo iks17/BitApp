@@ -16,13 +16,13 @@ namespace BitApp.Views
         public DashboardPage()
         {
             InitializeComponent();
-            this.BindingContext = new HomeViewModel();
+            this.BindingContext = new DashboardPageViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            ((HomeViewModel)this.BindingContext).OnAppearing();
+            ((DashboardPageViewModel)this.BindingContext).OnAppearing();
         }
     }
 }

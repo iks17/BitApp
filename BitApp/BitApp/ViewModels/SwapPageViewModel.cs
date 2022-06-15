@@ -18,6 +18,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using Xamarin.Forms.PlatformConfiguration;
 using BitApp.Services;
+using BitApp.Models;
 
 namespace BitApp.ViewModels
 {
@@ -50,27 +51,51 @@ namespace BitApp.ViewModels
                     OnPropertyChanged(nameof(AmountStr));
                 }
             } }
+        private string errorMessage;
+        public string ErrorMessage { get=>errorMessage; set 
+            {
+                if(errorMessage != value)
+                {
+                    errorMessage = value;
+                    OnPropertyChanged(nameof(ErrorMessage));
+                }
+            } }
+        public SwapPageViewModel()
+        {
+            transactionLogs = new ObservableCollection<TransactionLog>();
+            
+        }
         public ICommand transferCommand => new Command(transferMoney);
         public async void transferMoney()
         {
             try 
             { 
                 BitAPIProxy proxy = BitAPIProxy.CreateProxy();
-                if(amountStr==""|| amountStr == " " || amountStr == null)
+                if(amountStr==""|| amountStr == " " || amountStr == null||PhoneNumber=="" || PhoneNumber == " " || PhoneNumber ==null)
                 {
-                    //show error with value
+                    ErrorMessage = "plese entar valid amount and valid hole number";
                     return;
                 }
                 int amount = int.Parse(AmountStr);
                 bool con = await proxy.SendMoney(amount,PhoneNumber) ;
+                if(con)
+                {
+                    await App.Current.MainPage.DisplayAlert("Succes!", $"{amount} dollars have been transferd to {PhoneNumber}", "ok");
+                    AmountStr = "";
+                    PhoneNumber = "";
+                }
+                else
+                {
+                    ErrorMessage = "somthing went wrong";
+                    return;
+                }
             }
             catch(Exception e)
             {
-                //shoe error message
+                ErrorMessage = "somthing went wrong";
+                return;
             }
-
-
-
         }
+        public ObservableCollection<TransactionLog> transactionLogs { get; set; }
     }
 }
