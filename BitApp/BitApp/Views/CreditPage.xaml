@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False">
     
     <ContentPage.Content>
-        <ScrollView>
+       
         <Grid>
 
             <Grid Grid.Row="0" Margin="0,0,0,60" BackgroundColor="#1C375C" >
@@ -36,39 +36,33 @@
                     <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
                         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
                             <Label Text="NAME                             " TextColor="Black"></Label>
-                            <Entry  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                            <Entry Text="{Binding Name}"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                         </StackLayout>
 
-                        <StackLayout Orientation="Vertical" Margin="45,0" >
-                                <Label Text="CARD-Type" TextColor="Black"/>
-                                <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                            </StackLayout>
-
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
-                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical">
                                 <Label Text="CARD NUMBER             " TextColor="Black"/>
-                                <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                <Entry Text="{Binding CardNum}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                             </StackLayout>
 
-                    </StackLayout>
+                        </StackLayout>
+
+                    
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
                                 <Label Text="EXPIRATION DATE        " TextColor="Black" />
-                                <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                <DatePicker Date="{Binding Date}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                             </StackLayout>
 
                         <StackLayout Orientation="Vertical" Margin="45,0">
                                 <Label Text="    CVV    " TextColor="Black"/>
-                                <Entry HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                <Entry Text="{Binding CVV}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                             </StackLayout>
 
 
                     </StackLayout>
 
-                        <Button Text="Add Credit Card" Margin="60,40,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"/>
+                        <Button Text="Add Credit Card" Command="{Binding AddCreditCardCommand}" Margin="60,40,60,0" TextColor="White" CornerRadius="20" BackgroundColor="#013243"/>
 
                     </StackLayout>
 
@@ -76,6 +70,6 @@
         </Grid>
 
 
-        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

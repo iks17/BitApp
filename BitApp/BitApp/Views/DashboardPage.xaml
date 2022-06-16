@@ -59,14 +59,15 @@
                                 <Label Text="****" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="10,0"></Label>
                             </StackLayout>
 
-                            <Label Text="1234" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
+                            
+                            <Label Text="{Binding Last }" FontAttributes="Bold" FontSize="Large" TextColor="White" Margin="0,20"></Label>
                         </StackLayout>
-                        <Label Text="{Binding UserName}" TextColor="White"></Label>
+                        <Label Text="{Binding Card.Name}" TextColor="White"></Label>
                     </StackLayout>
 
                 </Frame>
-                <StackLayout Padding="10,0,10,0" >
-                    <Entry Text="" Placeholder="Enter amount to add to your bit app acount"/>
+                <StackLayout Padding="10,0,10,0" x:Name="MoveMoney" >
+                    <Entry Text="{Binding AmountStr}" Placeholder="Enter amount to add to your bit app acount"/>
                     <Button Text="Add to your balance" Margin="60,0,60,0" Command="{Binding MoneyToMe}" TextColor="White" CornerRadius="20" BackgroundColor="#013243"/>
                     <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
                 </StackLayout>

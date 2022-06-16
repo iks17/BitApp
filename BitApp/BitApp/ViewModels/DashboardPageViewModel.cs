@@ -69,6 +69,7 @@ namespace BitApp.ViewModels
         }
         public void OnAppearing()
         {
+            Last = Card.Id.Substring(Card.Id.Length - 4);
             OnAppearingEvent?.Invoke();
         }
         private string amountStr;
@@ -110,9 +111,9 @@ namespace BitApp.ViewModels
                 bool con = await proxy.SendMoney(amount);
                 if (con)
                 {
-                    await App.Current.MainPage.DisplayAlert("Succes!", $"{amount} dollars have been transferd to ", "ok");
+                    await App.Current.MainPage.DisplayAlert("Succes!", $"{amount} dollars have been transferd to your account ", "ok");
                     AmountStr = "";
-                    
+                    TotalBalance = await proxy.GetTotalBalance();
                 }
                 else
                 {
@@ -126,5 +127,23 @@ namespace BitApp.ViewModels
                 return;
             }
         }
+        private Card card;
+        public Card Card { get => card; set
+            {
+                if(card!=value)
+                {
+                    card = value;
+                    OnPropertyChanged(nameof(Card));
+                }
+            } }
+        private string last;
+        public string Last { get=>last; set
+            {
+                if (value != last)
+                {
+                    last = value;
+                    OnPropertyChanged(nameof(Last));
+                }
+            } }
     }
 }

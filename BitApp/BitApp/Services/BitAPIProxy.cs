@@ -260,5 +260,60 @@ namespace BitApp.Services
                 return false;
             }
         }
+        public async Task<Card> HasCreditCard()
+        {   
+            try
+            { 
+                HttpResponseMessage response = await this.client.GetAsync($"{this.baseUri}/GetCard");
+                if(response.IsSuccessStatusCode)
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve, //avoid reference loops!
+                        PropertyNameCaseInsensitive = true
+                    };
+                    string content = await response.Content.ReadAsStringAsync();
+                    Card con = JsonSerializer.Deserialize<Card>(content, options);
+                    return con;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
+        public async Task<bool> AddCreditCard(Card card)
+        {
+            try
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    PropertyNameCaseInsensitive = true
+                };
+                string json = JsonSerializer.Serialize<Card>(card, options);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await this.client.PostAsync($"{this.baseUri}/AddCreditCard",content);
+                if (response.IsSuccessStatusCode)
+                {
+                   
+                    string jsonContent = await response.Content.ReadAsStringAsync();
+                    bool con = JsonSerializer.Deserialize<bool>(jsonContent, options);
+                    return con;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

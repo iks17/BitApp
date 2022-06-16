@@ -24,11 +24,13 @@ namespace BitApp.Views
         {
             SwapPageViewModel context = (SwapPageViewModel)this.BindingContext;
             BitAPIProxy proxy = BitAPIProxy.CreateProxy();
+            context.transactionLogs.Clear();
             List<TransactionLog> Logs = await proxy.GetUserReceivedTransaction();
             foreach (var item in Logs)
             {
                 context.transactionLogs.Add(item);
             }
+            context.TotalBalance =  await proxy.GetTotalBalance();
             base.OnAppearing();
         }
     }

@@ -60,9 +60,19 @@ namespace BitApp.ViewModels
                     OnPropertyChanged(nameof(ErrorMessage));
                 }
             } }
+        private double totalbalance;
+        public double TotalBalance { get=>totalbalance; set 
+            {
+                if(value!=totalbalance)
+                {
+                    totalbalance = value;
+                    OnPropertyChanged(nameof(TotalBalance));
+                }
+            } }
         public SwapPageViewModel()
         {
             transactionLogs = new ObservableCollection<TransactionLog>();
+
             
         }
         public ICommand transferCommand => new Command(transferMoney);
@@ -83,6 +93,7 @@ namespace BitApp.ViewModels
                     await App.Current.MainPage.DisplayAlert("Succes!", $"{amount} dollars have been transferd to {PhoneNumber}", "ok");
                     AmountStr = "";
                     PhoneNumber = "";
+                    TotalBalance = await proxy.GetTotalBalance();
                 }
                 else
                 {
